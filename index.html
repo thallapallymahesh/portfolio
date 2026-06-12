@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahesh Portfolio</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.4);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #e2e8f0;
+}
+
+section {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 25px auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    animation: slideUp 1s ease;
+}
+
+h2 {
+    border-left: 5px solid #007bff;
+    padding-left: 10px;
+}
+
+.skills span {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 10px 15px;
+    margin: 8px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    transform: scale(1.1);
+    background: #7c3aed;
+}
+
+.project {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #7c3aed;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}nav{
+    background:#111;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    margin:0 15px;
+}
+
+#darkModeBtn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    padding:10px;
+    z-index:1001;
+}
+
+.dark{
+    background:#111;
+}
+
+.dark section{
+    background:#222;
+    color:white;
+}
+
+.stats{
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+}
+
+#topBtn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    padding:10px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<button id="darkModeBtn">🌙 Dark Mode</button><header>
+    <img src="photos.jpg.jpeg" alt="Profile Photo">
+
+    <h1>Thallapally Mahesh Goud</h1>
+
+    <p id="typing"></p>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a B.Tech student with a strong interest in software development, web technologies,
+        and cybersecurity. I enjoy building practical projects that help me strengthen my programming
+        and problem-solving skills. My technical skills include Java, Python, HTML, CSS,
+        JavaScript, Django, and GitHub.
+
+        I have developed projects such as an E-Commerce Mobile Store using Django and an
+        AI-Driven Threat Detection System for Cybersecurity. I am improving my development
+        skills and exploring opportunities to gain industry experience through internships
+        and real-world projects.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>Java</span>
+        <span>Python</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Django</span>
+        <span>GitHub</span>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3>AI-Driven Threat Detection System Using Machine Learning for Cybersecurity</h3>
+        <p>
+            Developed an AI-powered cybersecurity solution that detects suspicious login
+            activities using the Isolation Forest machine learning algorithm. Built an
+            interactive Streamlit dashboard for real-time threat prediction, security
+            monitoring, alert generation, threat logging, and report downloading.
+        </p>
+        <a href="https://github.com/thallapallymahesh/Ai-based-threat-detection-system" target="_blank">
+            View on GitHub
+        </a>
+    </div>
+
+    <div class="project">
+        <h3>E-Commerce Web Application for Online Mobile Store Using Django</h3>
+        <p>
+            Developed an e-commerce web application using Django that enables users to
+            browse mobile products, view product details, manage shopping carts,
+            register/login securely, and place orders.
+        </p>
+        <a href="https://github.com/thallapallymahesh/E-Commerce-Web-Application-For-Online-Mobile-Store-Using-Django" target="_blank">
+            View on GitHub
+        </a>
+    </div>
+
+</section>
+
+<section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+        <li>IBM SkillsBuild Certification</li>
+        <li>Cisco Cybersecurity Certification</li>
+        <li>Forage Program Certificate</li>
+        <li>Java Basic HackerRank Skill Certification</li>
+        <li>Python Basic HackerRank Skill Certification</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Resume</h2>
+    <p>Download my resume below:</p>
+    <a class="button" href="Mahesh_Resume.pdf" target="_blank">Download Resume</a>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+
+    <p>Email: thallapallymaheshgoud3579@gmail.com</p>
+
+<div class="social-icons">
+
+<a href="https://github.com/thallapallymahesh" target="_blank">
+GitHub
+</a>
+
+<br><br>
+
+<a href="https://www.linkedin.com/in/thallapally-mahesh-goud-1b69263b6/" target="_blank">
+LinkedIn
+</a>
+
+</div>
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 Thallapally Mahesh Goud | All Rights Reserved</p>
+</footer>
+<button id="topBtn">⬆</button>
+<script>
+
+const text =
+"B.Tech Student | Aspiring Software Developer | Web Development Enthusiast";
+
+let i = 0;
+
+function typeWriter(){
+    if(i < text.length){
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter,50);
+    }
+}
+
+typeWriter();
+
+document.getElementById("darkModeBtn")
+.onclick = function(){
+    document.body.classList.toggle("dark");
+};
+
+document.getElementById("topBtn")
+.onclick = function(){
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+};
+
+</script>
+</body>
+</html>
