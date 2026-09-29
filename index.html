@@ -1,329 +1,1182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mahesh Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: #333;
-}
+    <title>Thallapally Mahesh Goud | Portfolio</title>
 
-header {
-    background: linear-gradient(135deg, #2563eb, #7c3aed);
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-    animation: fadeIn 1.5s ease-in-out;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-header img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid white;
-    object-fit: cover;
-    margin-bottom: 20px;
-    box-shadow: 0 0 20px rgba(255,255,255,0.4);
-}
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #333;
+            line-height: 1.7;
+        }
 
-header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
+        /* ================= NAVIGATION ================= */
 
-header p {
-    font-size: 1.2rem;
-    color: #e2e8f0;
-}
+        nav {
+            background: #111827;
+            padding: 16px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+        }
 
-section {
-    padding: 40px;
-    max-width: 1000px;
-    margin: 25px auto;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-    animation: slideUp 1s ease;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
 
-h2 {
-    border-left: 5px solid #007bff;
-    padding-left: 10px;
-}
+        nav a:hover {
+            color: #60a5fa;
+        }
 
-.skills span {
-    display: inline-block;
-    background: #2563eb;
-    color: white;
-    padding: 10px 15px;
-    margin: 8px;
-    border-radius: 25px;
-    transition: 0.3s;
-}
+        /* ================= DARK MODE BUTTON ================= */
 
-.skills span:hover {
-    transform: scale(1.1);
-    background: #7c3aed;
-}
+        #darkModeBtn {
+            position: fixed;
+            top: 75px;
+            right: 20px;
+            padding: 10px 14px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+            z-index: 999;
+            transition: 0.3s;
+        }
 
-.project {
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: 0.4s;
-}
+        #darkModeBtn:hover {
+            background: #7c3aed;
+            transform: scale(1.05);
+        }
 
-.project:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
+        /* ================= HEADER ================= */
 
-a {
-    color: #2563eb;
-    text-decoration: none;
-}
+        header {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+            padding: 90px 20px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
 
-.button {
-    display: inline-block;
-    padding: 12px 20px;
-    background: #2563eb;
-    color: white;
-    border-radius: 8px;
-    transition: 0.3s;
-}
+        header img {
+            width: 165px;
+            height: 165px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+        }
 
-.button:hover {
-    background: #7c3aed;
-    transform: scale(1.05);
-}
+        header h1 {
+            font-size: 3rem;
+            margin: 5px 0 10px;
+        }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111;
-    color: white;
-    margin-top: 20px;
-}
+        header p {
+            font-size: 1.25rem;
+            color: #e2e8f0;
+            min-height: 35px;
+        }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+        /* ================= SECTIONS ================= */
 
-@keyframes slideUp {
-    from {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}nav{
-    background:#111;
-    padding:15px;
-    text-align:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
+        section {
+            padding: 45px;
+            max-width: 1050px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.18);
+            animation: slideUp 1s ease;
+        }
 
-nav a{
-    color:white;
-    margin:0 15px;
-}
+        h2 {
+            border-left: 5px solid #2563eb;
+            padding-left: 12px;
+            margin-bottom: 25px;
+            color: #1e293b;
+        }
 
-#darkModeBtn{
-    position:fixed;
-    top:20px;
-    right:20px;
-    padding:10px;
-    z-index:1001;
-}
+        h3 {
+            color: #1e3a8a;
+        }
 
-.dark{
-    background:#111;
-}
+        /* ================= ABOUT ================= */
 
-.dark section{
-    background:#222;
-    color:white;
-}
+        .about-text {
+            font-size: 1.05rem;
+            text-align: justify;
+        }
 
-.stats{
-    display:flex;
-    justify-content:space-around;
-    text-align:center;
-}
+        .highlight {
+            color: #2563eb;
+            font-weight: 600;
+        }
 
-#topBtn{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    padding:10px;
-}
-</style>
+        /* ================= SKILLS ================= */
+
+        .skill-category {
+            margin-bottom: 25px;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 10px;
+            color: #334155;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 9px 15px;
+            margin: 6px;
+            border-radius: 25px;
+            transition: 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .skills span:hover {
+            transform: translateY(-3px) scale(1.05);
+            background: #7c3aed;
+        }
+
+        /* ================= EXPERIENCE ================= */
+
+        .experience-card {
+            padding: 25px;
+            margin-bottom: 25px;
+            border-left: 5px solid #2563eb;
+            background: #f8fafc;
+            border-radius: 10px;
+        }
+
+        .experience-card h3 {
+            margin-bottom: 5px;
+        }
+
+        .experience-date {
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        .experience-card ul {
+            padding-left: 25px;
+        }
+
+        /* ================= PROJECTS ================= */
+
+        .project {
+            margin-bottom: 35px;
+            padding: 30px;
+            border-radius: 15px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+            transition: 0.4s;
+        }
+
+        .project:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .project h3 {
+            font-size: 1.4rem;
+            margin-top: 0;
+        }
+
+        .project h4 {
+            color: #334155;
+            margin-top: 22px;
+            margin-bottom: 8px;
+        }
+
+        .project ul {
+            padding-left: 25px;
+        }
+
+        .tech-tags {
+            margin-top: 15px;
+        }
+
+        .tech-tags span {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 6px 11px;
+            margin: 4px;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        /* ================= BUTTON ================= */
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #2563eb;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 12px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #7c3aed;
+            transform: scale(1.05);
+        }
+
+        .github-button {
+            background: #111827;
+        }
+
+        .github-button:hover {
+            background: #374151;
+        }
+
+        /* ================= CERTIFICATIONS ================= */
+
+        .certificate {
+            padding: 20px;
+            margin-bottom: 18px;
+            border-left: 5px solid #7c3aed;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+
+        .certificate h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact-item {
+            margin: 15px 0;
+            font-size: 1.05rem;
+        }
+
+        .contact-item a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111827;
+            color: white;
+            margin-top: 30px;
+        }
+
+        /* ================= TOP BUTTON ================= */
+
+        #topBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+            z-index: 999;
+            font-size: 18px;
+        }
+
+        #topBtn:hover {
+            background: #7c3aed;
+        }
+
+        /* ================= DARK MODE ================= */
+
+        body.dark {
+            background: #020617;
+            color: #e5e7eb;
+        }
+
+        .dark section {
+            background: #111827;
+            color: #e5e7eb;
+        }
+
+        .dark h2,
+        .dark h3,
+        .dark h4 {
+            color: #e5e7eb;
+        }
+
+        .dark .project,
+        .dark .experience-card,
+        .dark .certificate {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        .dark .skill-category h3 {
+            color: #cbd5e1;
+        }
+
+        .dark .tech-tags span {
+            background: #312e81;
+            color: #e0e7ff;
+        }
+
+        .dark a {
+            color: #60a5fa;
+        }
+
+        /* ================= ANIMATIONS ================= */
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 768px) {
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+                font-size: 14px;
+            }
+
+            header {
+                padding: 70px 15px;
+            }
+
+            header h1 {
+                font-size: 2.1rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            section {
+                margin: 20px 12px;
+                padding: 25px 20px;
+            }
+
+            .project {
+                padding: 22px;
+            }
+
+            #darkModeBtn {
+                top: 125px;
+                right: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <!-- ================= NAVIGATION ================= -->
 
-<button id="darkModeBtn">🌙 Dark Mode</button><header>
-    <img src="photos.jpg.jpeg" alt="Profile Photo">
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    <h1>Thallapally Mahesh Goud</h1>
+    <button id="darkModeBtn">🌙 Dark Mode</button>
 
-    <p id="typing"></p>
-</header>
+    <!-- ================= HEADER ================= -->
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        Final-year B.Tech Computer Science and Engineering (Networks) student with hands-on experience in
-developing web applications and AI-based cybersecurity solutions through academic projects. Passionate
-about solving real-world problems, learning new technologies, and building scalable software. Seeking an
-entry-level Software Developer role to contribute technical and analytical skills.
+    <header>
 
-    </p>
-</section>
+        <img src="photos.jpg.jpeg" alt="Thallapally Mahesh Goud">
 
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-        <span>Java</span>
-        <span>Python</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Django</span>
-        <span>GitHub</span>
-    </div>
-</section>
+        <h1>Thallapally Mahesh Goud</h1>
 
-<section id="projects">
-    <h2>Projects</h2>
+        <p id="typing"></p>
 
-    <div class="project">
-        <h3>AI-Driven Threat Detection System Using Machine Learning for Cybersecurity</h3>
-        <p>
-            Built an AI-powered threat detection system for identifying suspicious login activities.
-Implemented the Isolation Forest algorithm for anomaly detection.
-Designed an interactive Streamlit dashboard for real-time monitoring and visualization.
-Performed data preprocessing and analysis using Pandas.
-Generated visual reports using Matplotlib to support security monitoring.
-Improved threat detection through automated anomaly identification.
+    </header>
 
+    <!-- ================= PROFESSIONAL SUMMARY ================= -->
+
+    <section id="about">
+
+        <h2>Professional Summary</h2>
+
+        <p class="about-text">
+
+            I am a <span class="highlight">final-year B.Tech Computer Science and Engineering
+            (Networks)</span> student at Kakatiya Institute of Technology and Science,
+            Warangal, with practical experience in <span class="highlight">AI,
+            cybersecurity, and software development</span> through internships and
+            academic projects.
+
+            <br><br>
+
+            My technical interests include developing practical software applications,
+            AI-powered systems, cybersecurity solutions, and intelligent applications
+            using modern technologies. I have hands-on experience working with
+            <span class="highlight">Python, Java, JavaScript, React, FastAPI,
+            Streamlit, Scikit-learn, databases, RAG, and LLM-based applications.</span>
+
+            <br><br>
+
+            Through my projects and internships, I have worked on AI-based document
+            question answering, anomaly detection, cybersecurity applications,
+            web development, database integration, and API-based applications.
+            I enjoy learning new technologies and applying them to solve
+            practical problems.
+
+            <br><br>
+
+            My current goal is to begin my professional career in a
+            <span class="highlight">software development, AI, cybersecurity,
+            or related technology role</span> where I can contribute to real-world
+            projects while continuously developing my technical skills.
 
         </p>
-        <a href="https://github.com/thallapallymahesh/Ai-based-threat-detection-system" target="_blank">
-            View on GitHub
-        </a>
-    </div>
 
-    <div class="project">
-        <h3>E-Commerce Web Application for Online Mobile Store Using Django</h3>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
+        <h2>Technical Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill-category">
+
+                <h3>Programming Languages</h3>
+
+                <span>Python</span>
+                <span>Java</span>
+                <span>JavaScript</span>
+
+            </div>
+
+            <div class="skill-category">
+
+                <h3>AI & Generative AI</h3>
+
+                <span>RAG</span>
+                <span>LLMs</span>
+                <span>Ollama</span>
+
+            </div>
+
+            <div class="skill-category">
+
+                <h3>Frameworks & Libraries</h3>
+
+                <span>React</span>
+                <span>FastAPI</span>
+                <span>Streamlit</span>
+                <span>Scikit-learn</span>
+                <span>Pandas</span>
+                <span>Matplotlib</span>
+
+            </div>
+
+            <div class="skill-category">
+
+                <h3>Web Technologies</h3>
+
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>REST APIs</span>
+
+            </div>
+
+            <div class="skill-category">
+
+                <h3>Databases</h3>
+
+                <span>MySQL</span>
+                <span>SQLite</span>
+
+            </div>
+
+            <div class="skill-category">
+
+                <h3>Developer Tools</h3>
+
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>VS Code</span>
+
+            </div>
+
+            <div class="skill-category">
+
+                <h3>Core Computer Science</h3>
+
+                <span>OOP</span>
+                <span>DSA</span>
+                <span>DBMS</span>
+                <span>Operating Systems</span>
+                <span>Computer Networks</span>
+                <span>Software Engineering</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+
+    <section id="experience">
+
+        <h2>Internship Experience</h2>
+
+        <div class="experience-card">
+
+            <h3>Full Stack Development Intern — SITER Academy, Norway</h3>
+
+            <p class="experience-date">
+                June 2026 – August 2026
+            </p>
+
+            <ul>
+
+                <li>
+                    Built <strong>StudyAI</strong>, an AI study assistant designed
+                    to generate flashcards and quizzes from study notes.
+                </li>
+
+                <li>
+                    Used the <strong>Groq LLaMA API</strong> to integrate
+                    AI-powered content generation into the application.
+                </li>
+
+                <li>
+                    Developed responsive interfaces using
+                    <strong>React and React Router</strong>.
+                </li>
+
+                <li>
+                    Implemented user authentication and contributed to
+                    the application's full-stack development.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="experience-card">
+
+            <h3>Cybersecurity Intern — Thiranex Skill Development & Future Tech</h3>
+
+            <p class="experience-date">
+                August 2026 – September 2026
+            </p>
+
+            <ul>
+
+                <li>
+                    Completed <strong>4 hands-on cybersecurity projects</strong>
+                    using Python.
+                </li>
+
+                <li>
+                    Worked on password security, vulnerability assessment,
+                    phishing detection, and secure authentication.
+                </li>
+
+                <li>
+                    Used <strong>Tkinter, SQLite, and bcrypt</strong> while
+                    developing cybersecurity-focused applications.
+                </li>
+
+                <li>
+                    Applied practical security concepts to identify and
+                    address common cybersecurity problems.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+        <h2>Featured Projects</h2>
+
+
+        <!-- AI CHATBOT -->
+
+        <div class="project">
+
+            <h3>🤖 AI Intelligent Chatbot</h3>
+
+            <p>
+
+                The <strong>AI Intelligent Chatbot</strong> is an AI-powered
+                conversational application designed to provide intelligent
+                responses and document-based question answering.
+
+                The project combines a modern React frontend with a
+                FastAPI backend and local AI models through Ollama.
+
+            </p>
+
+
+            <h4>Project Overview</h4>
+
+            <p>
+
+                The application uses <strong>Llama 3.2</strong> through
+                <strong>Ollama</strong> for language-model based responses.
+                It also implements <strong>Retrieval-Augmented Generation
+                (RAG)</strong> to allow users to upload documents and ask
+                questions based on their content.
+
+            </p>
+
+
+            <h4>Key Features</h4>
+
+            <ul>
+
+                <li>
+                    AI-powered conversational chat using Llama 3.2/Ollama.
+                </li>
+
+                <li>
+                    React-based interactive chatbot interface.
+                </li>
+
+                <li>
+                    FastAPI backend for API communication and application logic.
+                </li>
+
+                <li>
+                    Persistent chat history for conversations.
+                </li>
+
+                <li>
+                    Document upload functionality.
+                </li>
+
+                <li>
+                    Retrieval-Augmented Generation (RAG) for
+                    document-based question answering.
+                </li>
+
+                <li>
+                    ChromaDB-based document retrieval.
+                </li>
+
+                <li>
+                    Nomic embeddings for document representation.
+                </li>
+
+                <li>
+                    Chat-scoped retrieval for keeping document context
+                    associated with the relevant conversation.
+                </li>
+
+                <li>
+                    Source citations to help identify the information
+                    used for generated answers.
+                </li>
+
+                <li>
+                    Automated testing for important application functionality.
+                </li>
+
+            </ul>
+
+
+            <h4>How It Works</h4>
+
+            <ol>
+
+                <li>
+                    The user interacts with the chatbot through the
+                    React frontend.
+                </li>
+
+                <li>
+                    Requests are sent to the FastAPI backend.
+                </li>
+
+                <li>
+                    Ollama runs the Llama 3.2 model to generate responses.
+                </li>
+
+                <li>
+                    When documents are uploaded, their content is processed
+                    and prepared for retrieval.
+                </li>
+
+                <li>
+                    Nomic embeddings are used to represent document content.
+                </li>
+
+                <li>
+                    ChromaDB stores and retrieves relevant document chunks.
+                </li>
+
+                <li>
+                    The retrieved information is provided as context
+                    for the AI response.
+                </li>
+
+                <li>
+                    The chatbot generates an answer and provides
+                    relevant source citations.
+                </li>
+
+            </ol>
+
+
+            <h4>Technologies Used</h4>
+
+            <div class="tech-tags">
+
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>React</span>
+                <span>Ollama</span>
+                <span>Llama 3.2</span>
+                <span>RAG</span>
+                <span>ChromaDB</span>
+                <span>Nomic Embeddings</span>
+                <span>SQLite</span>
+                <span>REST APIs</span>
+
+            </div>
+
+
+            <a class="button github-button"
+               href="https://github.com/thallapallymahesh/AI-Intelligent-Chatbot"
+               target="_blank">
+
+                View Project on GitHub
+
+            </a>
+
+        </div>
+
+
+        <!-- THREAT DETECTION -->
+
+        <div class="project">
+
+            <h3>🛡️ AI-Driven Threat Detection System for Cybersecurity</h3>
+
+            <p>
+
+                The <strong>AI-Driven Threat Detection System</strong> is a
+                machine-learning based cybersecurity application designed
+                to identify suspicious login activities and potential
+                security threats.
+
+            </p>
+
+
+            <h4>Project Overview</h4>
+
+            <p>
+
+                The system analyzes login-related security data and uses
+                the <strong>Isolation Forest</strong> machine-learning
+                algorithm to identify anomalous activities.
+
+                An interactive <strong>Streamlit dashboard</strong> provides
+                a visual interface for monitoring login activity,
+                identifying suspicious behavior, and reviewing security
+                information.
+
+            </p>
+
+
+            <h4>Key Features</h4>
+
+            <ul>
+
+                <li>
+                    Detection of suspicious login activities.
+                </li>
+
+                <li>
+                    Machine-learning based anomaly detection.
+                </li>
+
+                <li>
+                    Isolation Forest algorithm for identifying anomalies.
+                </li>
+
+                <li>
+                    Data processing and analysis using Pandas.
+                </li>
+
+                <li>
+                    Interactive Streamlit dashboard.
+                </li>
+
+                <li>
+                    Security-related data visualization using Matplotlib.
+                </li>
+
+                <li>
+                    MySQL integration for login data management.
+                </li>
+
+                <li>
+                    Automated threat alerts for suspicious activities.
+                </li>
+
+            </ul>
+
+
+            <h4>How It Works</h4>
+
+            <ol>
+
+                <li>
+                    Login activity data is collected and prepared for analysis.
+                </li>
+
+                <li>
+                    Relevant security-related features are processed.
+                </li>
+
+                <li>
+                    The Isolation Forest algorithm analyzes the data
+                    to identify unusual login behavior.
+                </li>
+
+                <li>
+                    Suspicious activities are identified as potential
+                    anomalies.
+                </li>
+
+                <li>
+                    The Streamlit dashboard presents the results
+                    through tables, metrics, and visualizations.
+                </li>
+
+                <li>
+                    MySQL is used for login data management and
+                    threat-related information.
+                </li>
+
+            </ol>
+
+
+            <h4>Technologies Used</h4>
+
+            <div class="tech-tags">
+
+                <span>Python</span>
+                <span>Streamlit</span>
+                <span>Scikit-learn</span>
+                <span>Isolation Forest</span>
+                <span>Pandas</span>
+                <span>Matplotlib</span>
+                <span>MySQL</span>
+
+            </div>
+
+
+            <a class="button github-button"
+               href="https://github.com/thallapallymahesh/Ai-based-threat-detection-system"
+               target="_blank">
+
+                View Project on GitHub
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CERTIFICATIONS ================= -->
+
+    <section id="certifications">
+
+        <h2>Certifications & Achievements</h2>
+
+
+        <div class="certificate">
+
+            <h3>NPTEL — Blockchain and Its Applications</h3>
+
+            <p>
+                <strong>Credential:</strong> Elite Certificate
+            </p>
+
+            <p>
+                Completed the NPTEL course focused on blockchain concepts
+                and applications.
+            </p>
+
+            <p>
+                <strong>Date:</strong> 30 April 2026
+            </p>
+
+        </div>
+
+
+        <div class="certificate">
+
+            <h3>Cisco Networking Academy — Introduction to Cybersecurity</h3>
+
+            <p>
+                Completed cybersecurity training covering fundamental
+                cybersecurity concepts and security awareness.
+            </p>
+
+            <p>
+                <strong>Date:</strong> 16 March 2026
+            </p>
+
+        </div>
+
+
+        <div class="certificate">
+
+            <h3>Deloitte — Technology Job Simulation</h3>
+
+            <p>
+                Completed a technology-focused job simulation through
+                Forage, gaining exposure to practical technology-related
+                tasks and professional workflows.
+            </p>
+
+            <p>
+                <strong>Date:</strong> 18 June 2026
+            </p>
+
+        </div>
+
+
+        <div class="certificate">
+
+            <h3>Adobe University Hackathon</h3>
+
+            <p>
+                Participated in the Adobe University Hackathon conducted
+                through Unstop.
+            </p>
+
+            <p>
+                <strong>Date:</strong> 09 August 2026
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= RESUME ================= -->
+
+    <section id="resume">
+
+        <h2>Resume</h2>
+
         <p>
-            Built a full-stack e-commerce web application using Django and SQLite.
-Implemented secure user authentication, product catalog, shopping cart, and checkout functionality.
-Designed responsive web pages using HTML, CSS, and JavaScript.
-Utilized Django ORM for efficient database operations and product management.
-Applied modular project architecture for better scalability and maintainability.
+
+            Download my latest resume to learn more about my education,
+            internship experience, technical skills, projects, and
+            certifications.
+
         </p>
-        <a href="https://github.com/thallapallymahesh/E-Commerce-Web-Application-For-Online-Mobile-Store-Using-Django" target="_blank">
-            View on GitHub
+
+        <a class="button"
+           href="My Resume.pdf"
+           target="_blank">
+
+            📄 Download Resume
+
         </a>
-    </div>
 
-</section>
+    </section>
 
-<section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-        <li>Getting Started with Cybersecurity -IBM</li>
-        <li>Introduction to Cybersecurity - Cisco
-Networking Academy</li>
-        <li>Forage Program Certificate</li>
-        <li>Java - HackerRank
-</li>
-        <li>Python - HackerRank
-</li>
-    </ul>
-</section>
+    <!-- ================= CONTACT ================= -->
 
-<section>
-    <h2>Resume</h2>
-    <p>Download my resume below:</p>
-    <a class="button" href="My Resume.pdf" target="_blank">Download Resume</a>
-</section>
+    <section id="contact">
 
-<section id="contact">
-    <h2>Contact</h2>
+        <h2>Contact</h2>
 
-    <p>Email: thallapallymaheshgoud3579@gmail.com</p>
+        <div class="contact-item">
 
-<div class="social-icons">
+            📧 <strong>Email:</strong>
 
-<a href="https://github.com/thallapallymahesh" target="_blank">
-GitHub
-</a>
+            <a href="mailto:thallapallymaheshgoud3579@gmail.com">
 
-<br><br>
+                thallapallymaheshgoud3579@gmail.com
 
-<a href="https://www.linkedin.com/in/thallapally-mahesh-goud-1b69263b6/" target="_blank">
-LinkedIn
-</a>
+            </a>
 
-</div>
-    </p>
-</section>
+        </div>
 
-<footer>
-    <p>© 2026 Thallapally Mahesh Goud | All Rights Reserved</p>
-</footer>
-<button id="topBtn">⬆</button>
-<script>
 
-const text =
-"B.Tech Student | Aspiring Software Developer | Web Development Enthusiast";
+        <div class="contact-item">
 
-let i = 0;
+            💻 <strong>GitHub:</strong>
 
-function typeWriter(){
-    if(i < text.length){
-        document.getElementById("typing").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter,50);
-    }
-}
+            <a href="https://github.com/thallapallymahesh"
+               target="_blank">
 
-typeWriter();
+                github.com/thallapallymahesh
 
-document.getElementById("darkModeBtn")
-.onclick = function(){
-    document.body.classList.toggle("dark");
-};
+            </a>
 
-document.getElementById("topBtn")
-.onclick = function(){
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-};
+        </div>
 
-</script>
+
+        <div class="contact-item">
+
+            🔗 <strong>LinkedIn:</strong>
+
+            <a href="https://www.linkedin.com/in/thallapally-mahesh-goud-1b69263b6/"
+               target="_blank">
+
+                LinkedIn Profile
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Thallapally Mahesh Goud | All Rights Reserved
+        </p>
+
+    </footer>
+
+
+    <!-- ================= TOP BUTTON ================= -->
+
+    <button id="topBtn">⬆</button>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        /* Typing Animation */
+
+        const text =
+            "B.Tech CSE (Networks) Student | AI & Cybersecurity | Software Development";
+
+        let i = 0;
+
+        function typeWriter() {
+
+            if (i < text.length) {
+
+                document.getElementById("typing").innerHTML +=
+                    text.charAt(i);
+
+                i++;
+
+                setTimeout(typeWriter, 45);
+
+            }
+
+        }
+
+        typeWriter();
+
+
+        /* Dark Mode */
+
+        document.getElementById("darkModeBtn").onclick = function () {
+
+            document.body.classList.toggle("dark");
+
+            if (document.body.classList.contains("dark")) {
+
+                this.innerHTML = "☀️ Light Mode";
+
+            } else {
+
+                this.innerHTML = "🌙 Dark Mode";
+
+            }
+
+        };
+
+
+        /* Back To Top */
+
+        document.getElementById("topBtn").onclick = function () {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        };
+
+    </script>
+
 </body>
+
 </html>
